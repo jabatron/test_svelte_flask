@@ -4,7 +4,7 @@
     export let isLogin = false;
 
     async function login() {
-        const response = await fetch('http://0.0.0.0:8080/login', {
+        const response = await fetch('https://testsvelteflask-production.up.railway.app:8080/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
