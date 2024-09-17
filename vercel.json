@@ -1,0 +1,22 @@
+{
+    "builds": [
+      {
+        "src": "f",
+        "use": "@sveltejs/adapter-vercel"
+      },
+      {
+        "src": "b",
+        "command": "flask run"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/f/dist"
+      },
+      {
+        "src": "/api/(.*)",
+        "dest": "/b/app.py"
+      }
+    ]
+  }
