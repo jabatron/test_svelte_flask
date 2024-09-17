@@ -1,27 +1,23 @@
+
 {
-  "version": 2,
-  "projects": [
-    {
-      "src": "f/",
-      "use": "@vercel/static-build",
-      "buildCommand": "npm run build",
-      "outputDirectory": "build",
-      "routes": [
-        {
-          "src": "/(.*)",
-          "dest": "/f/$1"
-        }
-      ]
-    },
-    {
-      "src": "b/",
-      "use": "@vercel/python",
-      "routes": [
-        {
-          "src": "/api/(.*)",
-          "dest": "/backend/api/$1"
-        }
-      ]
-    }
-  ]
+"version": 2,
+"builds": [
+  {
+    "src": "f/src"
+  },
+  {
+    "src": "b/app.py",
+    "use": "@vercel/python"
+  }
+],
+"routes":   [
+  {
+    "src": "/(.*)",
+    "dest": "/f/dist"
+  },
+  {
+    "src": "/api/(.*)",
+    "dest": "/b/app.py"
+  }
+]
 }
