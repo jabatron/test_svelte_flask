@@ -4,7 +4,7 @@ import jwt
 from datetime import datetime, timedelta, timezone
 import secrets
 
-app = Flask(__name__, static_folder='../f/dist', static_url_path='')
+app = Flask(__name__, static_folder='../frontend/dist2', static_url_path='')
 CORS(app, supports_credentials=True)  # Permitir solicitudes de front-end desde un origen diferente (en desarrollo)
 SECRET_KEY = secrets.token_hex(16)
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
@@ -18,7 +18,6 @@ def set_secure_cookie(response):
 
 @app.route('/')
 def index():
-    return "hola"
     return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/<path:path>')
