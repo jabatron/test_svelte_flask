@@ -18,7 +18,7 @@ def set_secure_cookie(response):
 
 @app.route('/')
 def index():
-    retun "hola"
+    return "hola"
     return send_from_directory(app.static_folder, 'index.html')
 
 @app.route('/<path:path>')
