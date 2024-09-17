@@ -1,5 +1,5 @@
 {
-    "builds": [
+    "buildCommand": [
       {
         "src": "f",
         "use": "@sveltejs/adapter-vercel"
