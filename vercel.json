@@ -4,12 +4,10 @@
 "builds": [
   {
     "src": "f/src",
-    "dest": ".",
     "command": "npm run build" 
   },
   {
     "src": "b/app.py",
-    "dest": ".",
     "use": "@vercel/python"
   }
 ],
