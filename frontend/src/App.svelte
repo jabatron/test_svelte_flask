@@ -5,7 +5,7 @@
 
     $: data = ''
     async function flask_protected() {
-        const response = await fetch('http://localhost:5000/protected', {
+        const response = await fetch('http://0.0.0.0:8080/protected', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
